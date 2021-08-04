@@ -1,9 +1,16 @@
+import React from "react";
 import "./App.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import PostsPage from "./pages/postPage";
 
 function App() {
   return (
     <div className="App">
-      <h2>Redux</h2>
+      <Router>
+        <Switch>
+          <Route excat path="/" component={PostsPage} />
+        </Switch>
+      </Router>
     </div>
   );
 }
